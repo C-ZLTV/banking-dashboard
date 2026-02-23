@@ -1,9 +1,16 @@
 import "./App.css";
+import Table, { type Column } from "./components.tsx/Table";
+import cardList from "./test/API/cards-list.json";
+import columnsJson from "./test/API/card-table-columns.json";
+import Input from "./components.tsx/Input/Input";
+
+const columns: Column[] = columnsJson.columns as Column[];
 
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <Input id={"branch"} />
+      <Table dataSource={cardList.cards} columns={columns} />
     </>
   );
 }
