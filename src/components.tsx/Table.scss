@@ -1,0 +1,41 @@
+// table {
+//     width: 100%;
+// }
+
+.table-head {
+  margin: 0;
+  border: 0 solid;
+  background-color: #fafafa;
+}
+
+.table-row-head th:last-child {
+  // background-color: red;
+  // border: none;
+  border-radius: 0rem 0.6rem 0rem 0rem;
+
+}
+
+.table-row-head th:first-child {
+  // background-color: red;
+  border-left: 1px solid #f0f0f0;
+  border-radius: 0.6rem 0rem 0rem 0rem;
+}
+
+.table-body {
+  margin: 0;
+  border: 0 solid;
+}
+
+.table-cell {
+  text-align: start;
+  border-bottom: 1px solid #f0f0f0;
+  overflow-wrap: break-word;
+  padding: 1rem 1rem;
+
+  &-head {
+    @extend .table-cell;
+    border-right: 1px solid #f0f0f0;
+    // border-radius: 1rem 1rem 0rem 0rem;
+
+  }
+}

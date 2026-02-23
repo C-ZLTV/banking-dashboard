@@ -1,0 +1,72 @@
+{"cards": [
+  {
+    "branch": "London221",
+    "status": "ACTIVE",
+    "pan": "************4821",
+    "activationDate": "2023-03-15",
+    "expiryDate": "2028-03-31"
+  },
+  {
+    "branch": "Manchester73",
+    "status": "BLOCKED",
+    "pan": "************1934",
+    "activationDate": "2022-07-01",
+    "expiryDate": "2027-07-31"
+  },
+  {
+    "branch": "Birmingham45",
+    "status": "ACTIVE",
+    "pan": "************7750",
+    "activationDate": "2024-01-20",
+    "expiryDate": "2029-01-31"
+  },
+  {
+    "branch": "Liverpool88",
+    "status": "EXPIRED",
+    "pan": "************6029",
+    "activationDate": "2018-11-10",
+    "expiryDate": "2023-11-30"
+  },
+  {
+    "branch": "Leeds12",
+    "status": "ACTIVE",
+    "pan": "************9147",
+    "activationDate": "2023-09-05",
+    "expiryDate": "2028-09-30"
+  },
+  {
+    "branch": "Bristol27",
+    "status": "SUSPENDED",
+    "pan": "************3582",
+    "activationDate": "2021-05-18",
+    "expiryDate": "2026-05-31"
+  },
+  {
+    "branch": "Sheffield101",
+    "status": "ACTIVE",
+    "pan": "************4403",
+    "activationDate": "2024-06-11",
+    "expiryDate": "2029-06-30"
+  },
+  {
+    "branch": "Nottingham66",
+    "status": "BLOCKED",
+    "pan": "************7295",
+    "activationDate": "2022-02-14",
+    "expiryDate": "2027-02-28"
+  },
+  {
+    "branch": "Oxford9",
+    "status": "ACTIVE",
+    "pan": "************1186",
+    "activationDate": "2023-12-01",
+    "expiryDate": "2028-12-31"
+  },
+  {
+    "branch": "Cambridge54",
+    "status": "ACTIVE",
+    "pan": "************9037",
+    "activationDate": "2024-04-22",
+    "expiryDate": "2029-04-30"
+  }
+]}
