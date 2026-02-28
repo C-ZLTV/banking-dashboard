@@ -1,21 +1,132 @@
-input {
-    border-width: 0.07rem;
-    border-style: solid;
-    border-color: #d9d9d9;
-    // border: 1x solid #d9d9d9;
-    padding: 0.5rem 0.6rem 0.4rem 0.8rem;
-    border-radius: 0.5rem;
+@import "../../style/breakpoints.scss";
+@import"../../style/variables.scss";
+
+
+$border-color: #d9d9d9;
+$border-radius: 0.5rem;
+$primary: #5b9fff;
+$primary-shadow: #0591ff1a;
+$error: #ff4d4f;
+$error-shadow: #ff4d4f1a;
+$warning: #faad14;
+$warning-shadow: #faad141a;
+$disabled-bg: #f5f5f5;
+$disabled-color: #00000040;
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  @media (min-width: $bp-sm) {
+    width: 100%;
+  }
 }
 
-input:focus {
-    border-color: #5b9fff;
-    box-shadow: 0 0 0 2px #0591ff1a;
-    outline: 0;
-    background-color: #ffffff;
+.input-label {
+  font-size: 0.8rem;
+  color: #333;
 }
 
-input:hover {
-    border-color: #5b9fff;
-    background-color: #ffffff;
+.input-required {
+  color: $error;
+  margin-left: 0.2rem;
+}
 
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: $border-radius;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  &:hover:not(.input-wrapper--disabled) {
+      border-color: $primary;
+    }
+ &:focus-within:not(.input-wrapper--disabled) {
+      border-color: $primary;
+      box-shadow: 0 0 0 2px $primary-shadow;
+    }
+
+
+  &--error {
+    border-color: $error !important;
+    &:focus-within {
+      box-shadow: 0 0 0 2px $error-shadow !important;
+    }
+  }
+
+  &--warning {
+    border-color: $warning !important;
+    &:focus-within {
+      box-shadow: 0 0 0 2px $warning-shadow !important;
+    }
+  }
+
+  &--disabled {
+    background-color: $disabled-bg;
+    cursor: not-allowed;
+    border-color: $border-color;
+
+    .input-field {
+      cursor: not-allowed;
+      color: $disabled-color;
+    }
+  }
+
+  &--small {
+    .input-field {
+      padding: $size-small-padding;
+      font-size: $size-small-font;
+    }
+    .input-prefix {
+      font-size: $size-small-font;
+    }
+  }
+
+  &--middle {
+    .input-field {
+      padding: $size-middle-padding;
+      font-size: $size-middle-font;
+    }
+    .input-prefix {
+      font-size: $size-middle-font;
+    }
+  }
+
+  &--large {
+    .input-field {
+      padding: $size-large-padding;
+      font-size: $size-large-font;
+    }
+    .input-prefix{
+      font-size: $size-large-font;
+    }
+  }
+}
+
+.input-field {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  min-width: 0;
+
+  &::placeholder {
+    color: #bfbfbf;
+  }
+}
+
+.input-prefix {
+  display: flex;
+  align-items: center;
+  color: #00000073;
+  flex-shrink: 0;
+}
+
+.input-prefix {
+  padding-left: 0.8rem;
 }
