@@ -1,5 +1,5 @@
 import "./Input.scss";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type InputSize = "small" | "middle" | "large";
 type InputStatus = "error" | "warning" | "";
