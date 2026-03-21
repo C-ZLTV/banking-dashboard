@@ -1,36 +1,36 @@
 @use "../../style" as *;
 
 .table-head {
-  margin: 0;
-  border: 0 solid;
+  font-size: $font-base;
+  margin: $sp-0;
+  border: $border-0 solid;
   background-color: #fafafa;
 }
 
 .table-row-head th:last-child {
-  border-radius: 0rem 0.6rem 0rem 0rem;
+  border-radius: $radius-none $radius-lg $radius-none $radius-none;
 
 }
 
 .table-row-head th:first-child {
-  border-left: 1px solid #f0f0f0;
-  border-radius: 0.6rem 0rem 0rem 0rem;
+  border-left: $border-1 solid #f0f0f0;
+  border-radius: $radius-lg $radius-none $radius-none $radius-none;
 }
 
 .table-body {
-  margin: 0;
-  border: 0 solid;
+  font-size: $font-sm;
+  margin: $sp-0;
+  border: $border-0 solid;
 }
 
 .table-cell {
   text-align: start;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: $border-1 solid #f0f0f0;
   overflow-wrap: break-word;
-  padding: 1rem 1rem;
+  padding: $sp-4 $sp-4;
 
   &-head {
     @extend .table-cell;
-    border-right: 1px solid #f0f0f0;
-    // border-radius: 1rem 1rem 0rem 0rem;
-
+    border-right: $border-1 solid #f0f0f0;
   }
 }
