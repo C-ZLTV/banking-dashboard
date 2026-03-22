@@ -1,0 +1,81 @@
+@use "../../style" as *;
+
+.card {
+  position: relative;
+  background: $color-bg-base;
+  border-radius: $radius-lg;
+  box-sizing: border-box;
+
+  &--loading {
+   opacity: 0.5;
+   user-select: none;
+  }
+
+  &--bordered {
+    border: $border-1 solid $color-border-secondary;
+  }
+
+  &--hoverable {
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+  }
+
+  // HEADER
+  &__header {
+    padding: $sp-2 $sp-2;
+    border-bottom: $border-1 solid  $color-border-secondary;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: $font-base;
+    font-weight: $font-semibold;
+  }
+
+  &__extra {
+    color: $color-text-secondary;
+  }
+
+  // BODY
+  &__body {
+    padding: $font-base;
+  }
+
+  // ACTIONS
+   &__actions {
+    margin: $sp-0;
+    padding: $sp-0;
+    list-style: none;
+    display: flex;
+    border-top: $border-1 solid $color-border-secondary;
+  }
+
+  &__action-item {
+    flex: 1;
+    text-align: center;
+    padding: $sp-3 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    color: $color-icon;
+
+    &:hover {
+      color: $color-icon-hover;
+    }
+
+    &:not(:last-child) {
+      border-right: $border-1 solid  $color-border-secondary;
+    }
+  }
+  
+  
+}
